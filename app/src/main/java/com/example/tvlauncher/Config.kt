@@ -2,8 +2,10 @@ package com.example.tvlauncher
 
 data class Shortcut(
     val title: String,
+    val service: String,
     val packageName: String,
-    val uri: String? = null // valfri djuplänk, t.ex. en YouTube-video
+    val color: Long,
+    val uri: String? = null // valfri djuplänk
 )
 
 object Config {
@@ -13,8 +15,8 @@ object Config {
 
     // Dina egna genvägskort. Ändra, lägg till och ta bort fritt.
     val shortcuts = listOf(
-        Shortcut("Netflix", "com.netflix.ninja"),
-        Shortcut("YouTube", "com.google.android.youtube.tv"),
-        Shortcut("Disney+", "com.disney.disneyplus"),
+        Shortcut("Öppna Netflix", "NETFLIX", "com.netflix.ninja", 0xFFE50914),
+        Shortcut("Öppna YouTube", "YOUTUBE", "com.google.android.youtube.tv", 0xFFFF0000),
+        Shortcut("Öppna Disney+", "DISNEY+", "com.disney.disneyplus", 0xFF113CCF),
     )
 }
